@@ -18,6 +18,10 @@ app.use(cors({
   credentials: true
 }));
 
+app.get('/', (req, res) => {
+  res.send('Video Converter API is running!')
+})
+
 // --- Upload dir ---
 const uploadDir = path.join(__dirname, 'uploads');
 const outputDir = path.join(__dirname, 'outputs');
